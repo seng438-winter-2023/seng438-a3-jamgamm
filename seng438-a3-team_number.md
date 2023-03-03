@@ -116,6 +116,23 @@ Text…
 <img src="media/Range/RangeGetUL.jpg" width="360"/>
 <img src="media/Range/RangeGetLCC.jpg" width="360"/>
 <img src="media/Range/RangeIntersect.jpg" width="360"/>
+<img src="media/Range/RangeCombine.jpg" width="360"/>
+<img src="media/Range/RangeMinMax.jpg" width="360"/>
+<img src="media/Range/RangeExpand.jpg" width="360"/>
+<img src="media/Range/RangeShift.jpg" width="360"/>
+<img src="media/Range/RangeScale.jpg" width="360"/>
+<img src="media/Range/RangeEq.jpg" width="360"/>
+<img src="media/Range/RangeString.jpg" width="360"/>
+
+## For DataUtilities Class
+<img src="media/DataUtilities/DataUEqual.jpg" width="360"/>
+<img src="media/DataUtilities/DataUClone.jpg" width="360"/>
+<img src="media/DataUtilities/DataUColTot.jpg" width="360"/>
+<img src="media/DataUtilities/DataUColTot2.jpg" width="360"/>
+<img src="media/DataUtilities/DataURowTot.jpg" width="360"/>
+<img src="media/DataUtilities/DataURowTot2.jpg" width="360"/>
+<img src="media/DataUtilities/DataUNumArr.jpg" width="360"/>
+<img src="media/DataUtilities/DataUGetCPercent.jpg" width="360"/>
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
