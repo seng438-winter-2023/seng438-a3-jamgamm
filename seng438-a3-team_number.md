@@ -14,7 +14,7 @@ for each group. Please see each lab document for details.)
 
 # 1 Introduction
 
-Text…
+This lab was conducted to give a stronger insight on white box testing. Through the analysis of the provided source code and documentation, we improved our test suite from the previous assignment to increase code coverage. With the assistance of the coverage tool EclEmma we created test cases to measure 3 forms of coverage: statement coverage, branch coverage, and method coverage.
 
 # 2 Manual data-flow coverage calculations for X and Y methods
 ## For DataUtilities.calculateColumnTotal:
@@ -104,7 +104,7 @@ getLowerBoundWithBoth0Bounds() - (1,2), (1,5)
 
 # 3 A detailed description of the testing strategy for the new unit test
 
-Text…
+For creating unit tests first we considered what we learned from our black box testing from assignment 2. We knew what the specifications for each function were based on reading the documentation so we created test cases with inputs that were partitioned into several equivalence classes. After running these tests we checked the line, branch and method coverage percentages. Then we examined the source code and created new test cases for lines, branches, or methods that were missed and could be accessed from each function in order to increase code coverage.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
@@ -112,7 +112,10 @@ Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
-Text…
+## For Range Class
+<img src="media/Range/RangeGetUL.jpg" width="360"/>
+<img src="media/Range/RangeGetLCC.jpg" width="360"/>
+<img src="media/Range/RangeIntersect.jpg" width="360"/>
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
