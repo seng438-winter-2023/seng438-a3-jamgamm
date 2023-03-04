@@ -50,26 +50,32 @@ This lab was conducted to give a stronger insight on white box testing. Through 
 | r2 | (8,8), (8,9), (8,11), (11,11) |
 
 ### DU-Pairs Covered Per Test Case:
-columnTotalCheck1Vals() - (1,1), (1,3), (1,5), (2,6), (2,12), (6,6), (6.12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6)
+| Test Case | DU-Pairs |
+| --- | --- |
+| columnTotalCheck1Vals() | (1,1, data), (1,3, data), (1,3, column) (1,5, data), (1,5, column), (2,6), (2,12), (6,6), (6.12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6) |
+| columnTotalCheck2Vals() | (1,1), (1,3), (1,5), (2,6), (2,12), (6,6), (6,12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6) |
+| columnTotalCheck4Vals() | (1,1), (1,3), (1,5), (2,6), (2,12), (6,6), (6.12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6) |
+| columnTotalCheckNoVals() | (1,1), (1,3, data), (1,3, column) (4,4), (8,8), (2,12) |
 
-columnTotalCheck2Vals() - (1,1), (1,3), (1,5), (2,6), (2,12), (6,6), (6,12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6)
-
-columnTotalCheck4Vals() - (1,1), (1,3), (1,5), (2,6), (2,12), (6,6), (6.12), (3,4), (3,8), (4,4), (4,5), (4,7), (7,7), (5,5), (5,6)
-
-columnTotalCheckNoVals() - (1,1), (1,3), (4,4), (8,8), (2,12)
 
 ### DU-Pair Coverage Calculation
+| Test Case | DU-Pairs Coverage (DU Pairs covered in test case/ total DU Pairs) |
+| --- | --- |
+| columnTotalCheck1Vals() | 17/27 = 62.96% |
+| columnTotalCheck2Vals() | 17/27 = 62.96% |
+| columnTotalCheck4Vals() | 17/27 = 62.96% |
+| columnTotalCheckNoVals() | 6/27 = 22.22% |
 
 ---
 ## For Range.getLowerBound():
 ### Data Flow Graph:
-<img src="media/RangeGetLowerDFG.jpg" alt="media/Datautil.jpg" width="360"/>
+<img src="media/RangeGetLowerDFG.jpg" alt="media/RangeGetLowerDFG.jpg" width="360"/>
 
 ### Def-Use per Statement:
 | Statement | Def | Use |
 | --- | --- | --- |
 | public double getLowerBound(); | lower, upper | none |
-| if (lower \> upper) | none | lower, upper |
+| if (lower > upper) | none | lower, upper |
 | String msg = "Range(double, double): requires lower (" + lower + ") \<= upper (" + upper + ")."; | msg | lower, upper |
 | throw new IllegalArgumentException(msg); | none | msg |
 | return this.lower; | none | lower |
@@ -83,24 +89,31 @@ columnTotalCheckNoVals() - (1,1), (1,3), (4,4), (8,8), (2,12)
 | msg | (3,4) |
 
 ### DU-Pairs Covered Per Test Case:
-(These are tests that were reused from assignment2, did not any other tests as the only path that wasn't covered is unfeasible):
+(These are all tests that were created in assignment2, we did not create any other tests for getLowerBound() as the only path that wasn't covered is unfeasible):
 
-getLowerBoundWithNegativeInteger() - (1,2), (1,5)
+| Test Case | DU-Pairs |
+| --- | --- |
+| getLowerBoundWithNegativeInteger() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithPositiveInteger() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithSameRange() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithZero() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithDecimalNegative() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithDecimalPositive() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithBoth0Bounds() | (1,2, lower), (1,3, upper), (1,5, lower) |
 
-getLowerBoundWithPositiveInteger() - (1,2), (1,5)
-
-getLowerBoundWithSameRange() - (1,2), (1,5)
-
-getLowerBoundWithZero() - (1,2), (1,5)
-
-getLowerBoundWithDecimalNegative() - (1,2), (1,5)
-
-getLowerBoundWithDecimalPositive() - (1,2), (1,5)
-
-getLowerBoundWithBoth0Bounds() - (1,2), (1,5)
 
 
 ### DU-Pair Coverage Calculation
+| Test Case | DU-Pair Coverage (DU Pairs covered in test case/ total DU Pairs) |
+| --- | --- |
+| getLowerBoundWithNegativeInteger() | 3/6 = 50% |
+| getLowerBoundWithPositiveInteger() | 3/6 = 50% |
+| getLowerBoundWithSameRange() | 3/6 = 50% |
+| getLowerBoundWithZero() | 3/6 = 50% |
+| getLowerBoundWithDecimalNegative() | 3/6 = 50% |
+| getLowerBoundWithDecimalPositive() | 3/6 = 50% |
+| getLowerBoundWithBoth0Bounds() | 3/6 = 50% |
+
 
 # 3 A detailed description of the testing strategy for the new unit test
 
@@ -113,30 +126,35 @@ Text…
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
 ## For Range Class
-<img src="media/Range/RangeGetUL.jpg" width="360"/>
-<img src="media/Range/RangeGetLCC.jpg" width="360"/>
-<img src="media/Range/RangeIntersect.jpg" width="360"/>
-<img src="media/Range/RangeCombine.jpg" width="360"/>
-<img src="media/Range/RangeMinMax.jpg" width="360"/>
-<img src="media/Range/RangeExpand.jpg" width="360"/>
-<img src="media/Range/RangeShift.jpg" width="360"/>
-<img src="media/Range/RangeScale.jpg" width="360"/>
-<img src="media/Range/RangeEq.jpg" width="360"/>
-<img src="media/Range/RangeString.jpg" width="360"/>
+### Line Coverage
+<img src="media/RangeLineCov.jpg" width="360"/>
+
+### Branch Coverage
+<img src="media/RangeBranchCov.jpg" width="360"/>
+
+### Method Coverage
+<img src="media/RangeMethodCov.jpg" width="360"/>
 
 ## For DataUtilities Class
-<img src="media/DataUtilities/DataUEqual.jpg" width="360"/>
-<img src="media/DataUtilities/DataUClone.jpg" width="360"/>
-<img src="media/DataUtilities/DataUColTot.jpg" width="360"/>
-<img src="media/DataUtilities/DataUColTot2.jpg" width="360"/>
-<img src="media/DataUtilities/DataURowTot.jpg" width="360"/>
-<img src="media/DataUtilities/DataURowTot2.jpg" width="360"/>
-<img src="media/DataUtilities/DataUNumArr.jpg" width="360"/>
-<img src="media/DataUtilities/DataUGetCPercent.jpg" width="360"/>
+### Line Coverage
+<img src="media/DataULineCov.jpg" width="360"/>
+
+### Branch Coverage
+<img src="media/DataUBranchCov.jpg" width="360"/>
+
+### Method Coverage
+<img src="media/DataUMethodCov.jpg" width="360"/>
+
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
-Text…
+Our group used EclEmma as coverage tool
+
+Pros: Provides coverage analysis for each type of coverage separately, also provides a review of the code, displaying which line of code was tested or not. Additionally it provided a good overview of the coverage in a relatively simple to understand UI representation. Another benefit was its incorporation with Eclipse and JUnit, which allowed us to quickly identify potential issues with our test cases, and understand why some coverage might be missed.
+
+Cons:
+There were a few notable cons, firstly, given that it is a coverage tool, it did not account for potential logical faults. If the code did not expressly mark out an edge case, or limit, this approach would not catch it. Additionally, the tool did not account for all possible combinations of running code, only that each branch and line was run, so it is possible that certain possibilities that result in errors are completely unaccounted for. It also was missing some forms of coverage, ie, condition coverage. Additionally it might report undercovered code for branches which are unreachable. 
+
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
@@ -144,7 +162,7 @@ Text…
 
 # 8 A discussion on how the team work/effort was divided and managed
 
-Text…
+Each team member was assigned a set of methods from Range and DataUtilities. Each member was responsible for generating test cases for the given methods and once everyone completed their tasks, we put all the test cases together and modified the tests if more coverage was required.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
@@ -152,4 +170,4 @@ Text…
 
 # 10 Comments/feedback on the lab itself
 
-Text…
+The instructions for setting up the project initially could be more descriptive, as there were extra steps required in order to get the project to start working, such as moving the org folder into the src folder, and being more specific about what external libraries are required to be imported, as the A3 artifacts alone were missing jar files so we had to retrieve them from the A2 artifacts.
