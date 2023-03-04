@@ -89,17 +89,17 @@ This lab was conducted to give a stronger insight on white box testing. Through 
 | msg | (3,4) |
 
 ### DU-Pairs Covered Per Test Case:
-(These are all tests that were created in assignment2, we did not create any other tests for getLowerBound() as the only path that wasn't covered is unfeasible):
+(These are all tests that were created in assignment2, we did not create any other tests for getLowerBound() as the only path that wasn't covered is unfeasible. Also tests that tested invalid input not included):
 
 | Test Case | DU-Pairs |
 | --- | --- |
-| getLowerBoundWithNegativeInteger() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithPositiveInteger() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithSameRange() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithZero() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithDecimalNegative() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithDecimalPositive() | (1,2, lower), (1,3, upper), (1,5, lower) |
-| getLowerBoundWithBoth0Bounds() | (1,2, lower), (1,3, upper), (1,5, lower) |
+| getLowerBoundWithNegativeInteger() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithPositiveInteger() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithSameRange() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithZero() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithDecimalNegative() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithDecimalPositive() | (1,2, lower), (1,2, upper), (1,5, lower) |
+| getLowerBoundWithBoth0Bounds() | (1,2, lower), (1,2, upper), (1,5, lower) |
 
 
 
