@@ -120,8 +120,20 @@ This lab was conducted to give a stronger insight on white box testing. Through 
 For creating unit tests first we considered what we learned from our black box testing from assignment 2. We knew what the specifications for each function were based on reading the documentation so we created test cases with inputs that were partitioned into several equivalence classes. After running these tests we checked the line, branch and method coverage percentages. Then we examined the source code and created new test cases for lines, branches, or methods that were missed and could be accessed from each function in order to increase code coverage.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
+We used the methods below to improve the coverage for the method calculateColumnTotal(Values2D data, int column). Our test cases from the previous assignment only reached a total coverage of about 90%. Having access to the code stub allowed us to notice that some branches of the code were not being covered by the previous tests so we added the following tests for the missing branch coverage and achieved a total coverage of 100%.
 
-Text…
+columnTotalCheckNoRows()
+
+columnTotalCheckWithNull()
+
+columnTotalCheckWithNegativeRows()
+
+Similarly, our previous test cases for calculateRowTotal(Values2D data, int row)only reached a total coverage of about 87% percent. By adding tests to cover the branches previously missed, we were able to improve the coverage to 100%.
+
+rowTotalCheckNoRows()
+
+rowTotalCheckWithNull()
+
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
@@ -158,7 +170,21 @@ There were a few notable cons, firstly, given that it is a coverage tool, it did
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
-Text…
+### Requirements-based:
+
+Advantages:
+Requirements based testing is a well-defined, systematic approach to testing all features of the code.
+
+Disadvantages: 
+The test suite size can rapidly grow based on the number of categories being tested.
+
+### Coverage-based:
+Advantages: 
+Coverage based testing makes sure every line of code and branch is tested which theoretically is all the possible outcomes of the code. 
+
+Disadvantages: 
+Although every line, branch and method could be covered, having 100% coverage does not guarantee the code is bug free, if the code is missing logical implementation, it will not be caught by coverage-based testing.
+
 
 # 8 A discussion on how the team work/effort was divided and managed
 
@@ -166,7 +192,10 @@ Each team member was assigned a set of methods from Range and DataUtilities. Eac
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-Text…
+Difficulties and challenges overcome: A difficulty encountered by all members of the group was the initial set up of the project as we had difficulties importing the different libraries and working with EclEmma. Some libraries would not work with one of the classes.
+
+Lessons learned: We got a more in-depth idea of white-box testing especially in terms of statement, branch and method coverage.
+
 
 # 10 Comments/feedback on the lab itself
 
